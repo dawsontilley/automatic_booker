@@ -1,0 +1,24 @@
+
+name: Book
+
+on:
+  schedule:
+    - cron: "1 4 * * 1-4"
+  workflow_dispatch:
+
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+
+jobs:
+  book-three_days_out:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v2.0.0
+        with:
+          python-version: '3.7'
+      - name: Run Booking Bot
+        run: python app.py
+
+      

@@ -19,7 +19,6 @@ jobs:
         with:
           python-version: '3.7'
       - name: Run Booking Bot
-      - if
         run: python app.py
 
       

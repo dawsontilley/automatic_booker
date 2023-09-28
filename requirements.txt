@@ -1,4 +1,3 @@
-selenium
-selenium.webdriver.chrome.service
+selenium==4.13.0
 datetime
 time

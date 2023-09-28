@@ -24,9 +24,13 @@ jobs:
         run: |
           pip install -r requirements.txt # If you have a requirements.txt files
       - name: List Files in Repository
-        run: ls -R
+        run: ls -l
+      - name: Change File Permissions
+        run: |
+          chmod +x chromedriver.exe
       - name: List Files in Repository
-        run: ls -R
+        run: ls -l
+
       - name: Run Booking Bot
         run: python app.py
 

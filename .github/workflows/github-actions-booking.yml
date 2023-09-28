@@ -14,10 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2.0.0
         with:
           python-version: '3.7'
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt # If you have a requirements.txt files
       - name: Run Booking Bot
         run: python app.py
 

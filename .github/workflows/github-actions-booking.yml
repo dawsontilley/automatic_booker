@@ -22,7 +22,6 @@ jobs:
           python-version: '3.8'
           chromedriver-version: '88.0.4324.96'
       
-      - name: Setup Chrome
       - uses: browser-actions/setup-chrome@v1
       - run: chrome --version
       - name: Install Dependencies

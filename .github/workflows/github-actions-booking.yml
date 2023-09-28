@@ -23,6 +23,10 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt # If you have a requirements.txt files
+            - name: List Files in Repository
+        run: ls -R
+              - name: List Files in Repository
+        run: ls -R
       - name: Run Booking Bot
         run: python app.py
 

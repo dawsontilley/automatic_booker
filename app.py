@@ -36,6 +36,9 @@ driver = webdriver.Chrome(service=service, options = options)
 driver.implicitly_wait(2)
 
 driver.get(url)
+print("Dates")
+print(datetime.datetime.today().day)
+print(datetime.datetime.today())
 
 user_block= driver.find_element('id','Username')
 pw = driver.find_element('id','Password')

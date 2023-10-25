@@ -30,8 +30,8 @@ print(environ.get("CHROMEWEBDRIVER",'./chromedriver.exe'))
 #options.add_argument('--no-sandbox')
 #options.add_argument("--disable-dev-shm-usage")
 #options.add_argument("--headless=new")
-service = Service(executable_path= environ.get("CHROMEWEBDRIVER",'./chromedriver.exe'))
-
+#service = Service(executable_path= environ.get("CHROMEWEBDRIVER",'./chromedriver.exe'))
+service = Service()
 driver = webdriver.Chrome(service=service)
 driver.implicitly_wait(2)
 

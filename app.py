@@ -58,9 +58,15 @@ squash_pick = driver.find_element("xpath", "//a[text() = 'Squash Court']")
 squash_pick.click()
 
 
+
 date_to_book = three_days_out()
 print(date_to_book)
 xpath_booking_date = f"//a[text()={date_to_book}]"
+
+time.sleep(2)
+
+elems = driver.find_elements_by_xpath("//a")
+print(elems)
 
 booking_date = driver.find_element("xpath",xpath_booking_date)
 booking_date.click()
@@ -77,3 +83,5 @@ time.sleep(2)
 save_reso = driver.find_element("xpath" , "//*[@id='ctl00_ContentPlaceHolder1_FooterSaveButton']")
 save_reso.click()
 time.sleep(10)
+
+driver.quit()

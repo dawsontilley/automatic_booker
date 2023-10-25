@@ -26,13 +26,13 @@ end = "9/22/2023%206:00:00%20PM"
 #browser = webdriver.Chrome(executable_path='./chromedriver.exe')
 #browser.get(url)
 print(environ.get("CHROMEWEBDRIVER",'./chromedriver.exe'))
-#options = Options
-#options.add_argument('--no-sandbox')
-#options.add_argument("--disable-dev-shm-usage")
-#options.add_argument("--headless=new")
+options = webdriver.ChromeOptions()
+options.add_argument('--no-sandbox')
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--headless=new")
 #service = Service(executable_path= environ.get("CHROMEWEBDRIVER",'./chromedriver.exe'))
 service = Service()
-driver = webdriver.Chrome(service=service)
+driver = webdriver.Chrome(service=service, options = options)
 driver.implicitly_wait(2)
 
 driver.get(url)

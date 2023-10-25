@@ -65,7 +65,7 @@ xpath_booking_date = f"//a[text()={date_to_book}]"
 
 time.sleep(2)
 
-elems = driver.find_elements_by_xpath("//a")
+elems = driver.find_element("xpath","//a")
 print(elems)
 
 booking_date = driver.find_element("xpath",xpath_booking_date)

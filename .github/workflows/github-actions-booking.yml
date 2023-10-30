@@ -2,7 +2,7 @@ name: Book
 
 on:
   schedule:
-    - cron: "1 4 * * 1-4"
+    - cron: "1 4 * * 0-1,5-6"
   workflow_dispatch:
 
 env:
@@ -31,9 +31,6 @@ jobs:
       
       - uses: browser-actions/setup-chrome@v1
       - run: chrome --version
-      
-      
-
       - name: Install Dependencies
         run: |
           pip install -r requirements.txt # If you have a requirements.txt files
